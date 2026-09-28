@@ -14,15 +14,15 @@ jobs:
         include:
           - platform: linux
             os: ubuntu-latest
-            build_cmd: flet build linux
+            build_cmd: uv run flet build linux
             artifact_path: build/linux
           - platform: windows
             os: windows-latest
-            build_cmd: flet build windows
+            build_cmd: uv run flet build windows
             artifact_path: build/windows
           - platform: android
             os: ubuntu-latest
-            build_cmd: flet build apk
+            build_cmd: uv run flet build apk
             artifact_path: build/app/outputs/flutter-apk/app-release.apk
 
     runs-on: ${{ matrix.os }}
